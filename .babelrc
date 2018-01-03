@@ -1,0 +1,9 @@
+{
+    //babel is used to convert the ES6 javascript/react jsx into ES5 javascript, the presets is map to a special javascript subset
+    // the preset need to be installed and added to the package.json
+    "presets":["babel-preset-react","babel-preset-es2015","babel-preset-stage-1"],
+    "plugins": [["import", {
+                            "libraryName": "antd",
+                            "style": false   // or 'css' 
+                            }]]
+}

@@ -1,0 +1,43 @@
+{
+  "name": "reactjssetup",
+  "version": "1.0.0",
+  "description": "blog",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "globalLocation": "npm config get prefix",
+    "build": "browserify src/index.js -t babelify -t uglifyify -d|exorcist build/bundle.js.map > build/bundle.js",
+    "watch": "watchify src/index.js -t babelify -o build/bundle.js -v",
+    "package": "browserify -t partialify build/bundle.js -o build/dist/bundle.js",
+    "start": "http-server -a 0.0.0.0 -p 8000"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-redux": "^5.0.5",
+    "react-router": "^4.1.1",
+    "react-router-dom": "^4.1.1",
+    "redux": "^3.7.0"
+  },
+  "devDependencies": {
+    "antd": "^2.10.4",
+    "babel": "^6.23.0",
+    "babel-cli": "^6.24.1",
+    "babel-plugin-import": "^1.2.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-1": "^6.24.1",
+    "babel-runtime": "^6.23.0",
+    "babelify": "^7.3.0",
+    "browserify": "^14.4.0",
+    "browserify-css": "^0.10.1",
+    "exorcist": "^0.4.0",
+    "http-server": "^0.10.0",
+    "partialify": "^3.1.6",
+    "uglifyify": "^3.0.4",
+    "watchify": "^3.9.0"
+  }
+}
