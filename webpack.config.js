@@ -7,6 +7,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './build')
   },
+  watch:true,
   module: {
 	//配置在打包过程中如何识别module，处理module
     rules: [
@@ -30,9 +31,9 @@ module.exports = {
       { test: /\.png/, loader: "url-loader?limit=10000&mimetype=image/png" },
     ]
   },
-  plugins: [new UglifyJsPlugin({//做JS的压缩，see https://webpack.js.org/plugins/uglifyjs-webpack-plugin/?_sm_au_=iVVSk60bWFkDbpjQ for detail
-    test: /\.js($|\?)/i,
-    exclude: /\/excludes/,
-    sourceMap: true
-  })]
+  // plugins: [new UglifyJsPlugin({//做JS的压缩，see https://webpack.js.org/plugins/uglifyjs-webpack-plugin/?_sm_au_=iVVSk60bWFkDbpjQ for detail
+  //   test: /\.js($|\?)/i,
+  //   exclude: /\/excludes/,
+  //   sourceMap: true
+  // })]
 };

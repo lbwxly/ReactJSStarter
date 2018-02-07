@@ -1,0 +1,13 @@
+{
+    "extends": "airbnb",
+    "parser": "babel-eslint", // see https://eslint.org/docs/user-guide/configuring for detail.
+    "parserOptions": {
+      "ecmaVersion": 6
+    },
+    "rules": {
+      "react/prefer-stateless-function":"off",
+      "max-len":"off"
+    }
+}
+
+// See https://eslint.org/docs/user-guide/getting-started for eslint detail
