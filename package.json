@@ -9,6 +9,7 @@
     "build": "browserify src/index.js -t babelify -t uglifyify -d|exorcist build/bundle.js.map > build/bundle.js",
     "watch": "watchify src/index.js -t babelify -o build/bundle.js -v",
     "package": "browserify -t partialify build/bundle.js -o build/dist/bundle.js",
+    "web-pack-build": "./node_modules/.bin/webpack --config webpack.config.js",
     "start": "http-server -a 0.0.0.0 -p 8000"
   },
   "author": "",
@@ -18,6 +19,7 @@
     "react-dom": "^15.5.4",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.1",
+    "babel-polyfill": "^6.26.0",
     "react-router-dom": "^4.1.1",
     "redux": "^3.7.0"
   },
@@ -25,7 +27,9 @@
     "antd": "^2.10.4",
     "babel": "^6.23.0",
     "babel-cli": "^6.24.1",
-    "babel-plugin-import": "^1.2.1",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-import": "^1.6.3",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
@@ -34,10 +38,15 @@
     "babelify": "^7.3.0",
     "browserify": "^14.4.0",
     "browserify-css": "^0.10.1",
+    "css-loader": "^0.28.9",
     "exorcist": "^0.4.0",
     "http-server": "^0.10.0",
     "partialify": "^3.1.6",
+    "style-loader": "^0.20.1",
     "uglifyify": "^3.0.4",
-    "watchify": "^3.9.0"
+    "uglifyjs-webpack-plugin": "^1.1.8",
+    "url-loader": "^0.6.2",
+    "watchify": "^3.9.0",
+    "webpack": "^3.10.0"
   }
 }
